@@ -1,0 +1,9 @@
+ui_print("Installing <GSINAME>, created by GInstaller");
+ui_print("Installing boot...");
+package_extract_file("boot.img", "/dev/block/by-name/boot");
+ui_print("Installing vendor...");
+package_extract_file("vendor.img", "/dev/block/by-name/vendor");
+ui_print("Installing system...");
+package_extract_file("system.img", "/dev/block/by-name/system");
+show_progress(1.000000, 0);
+ui_print("Done, <GSINAME> successfully installed.");
